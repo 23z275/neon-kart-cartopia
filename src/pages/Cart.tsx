@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 import Layout from '@/components/Layout';
 import CartItem, { CartItemProps } from '@/components/CartItem';
 import CartSummary from '@/components/CartSummary';
