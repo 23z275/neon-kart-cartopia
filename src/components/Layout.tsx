@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Home, Menu, X } from 'lucide-react';
+import { ShoppingCart, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface LayoutProps {
@@ -26,8 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Link>
           
           <nav className="hidden md:flex items-center gap-6">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/cart" isActive>
+            <NavLink to="/" isActive>
               <ShoppingCart className="w-5 h-5 mr-1" />
               Cart
             </NavLink>
@@ -35,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           
           <div className="flex items-center gap-4">
             <Link 
-              to="/cart" 
+              to="/" 
               className="relative p-2 text-white hover:text-kartify-neon-blue transition-colors duration-200 ease-in-out"
             >
               <ShoppingCart className="w-6 h-6" />
@@ -59,10 +58,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       )}>
         <div className="pt-24 px-6 flex flex-col gap-6">
           <MobileNavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>
-            <Home className="w-5 h-5 mr-2" />
-            Home
-          </MobileNavLink>
-          <MobileNavLink to="/cart" onClick={() => setIsMobileMenuOpen(false)}>
             <ShoppingCart className="w-5 h-5 mr-2" />
             Cart
           </MobileNavLink>

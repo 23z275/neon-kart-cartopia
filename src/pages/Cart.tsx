@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { toast } from 'sonner';
 import Layout from '@/components/Layout';
@@ -123,12 +122,12 @@ const Cart = () => {
               <p className="text-white/60 mb-6">
                 Looks like you haven't added any products to your cart yet.
               </p>
-              <a
-                href="/"
+              <button
+                onClick={() => setCartItems(initialItems)}
                 className="inline-block px-6 py-3 bg-kartify-neon-blue text-black font-medium rounded-md hover:bg-kartify-neon-green transition-colors duration-300"
               >
-                Continue Shopping
-              </a>
+                Load Sample Products
+              </button>
             </div>
           </div>
         )}
